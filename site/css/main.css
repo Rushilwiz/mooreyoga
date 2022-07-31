@@ -2,52 +2,65 @@ html, body {
   padding: 0;
   margin: 0;
   border: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 nav {
   position: fixed;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  align-items: center;
   z-index: 999;
   margin-left: 45px;
   height: 100vh;
   width: 100px;
 }
-
 nav .menu {
   margin: auto auto;
   height: 75%;
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
 }
-
 nav .menu .box {
   height: 100px;
   width: 100%;
-  background-color: #fffdfdb4;
+  background-color: rgba(255, 253, 253, 0.7058823529);
   border-radius: 25px;
+  display: none;
+}
+nav .menu #menu-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+nav .menu #menu-box .hamburger {
+  width: 50%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+nav .menu #menu-box .hamburger .line-1 {
+  height: 8px;
+  width: 100%;
+  background: black;
+  border-radius: 8px;
+}
+nav .menu #menu-box .hamburger .line-2 {
+  height: 8px;
+  width: 100%;
+  background: black;
+  border-radius: 8px;
+}
+nav .menu #menu-box .hamburger .line-3 {
+  height: 8px;
+  width: 100%;
+  background: black;
+  border-radius: 8px;
 }
 
 * {
@@ -75,30 +88,73 @@ section {
 }
 
 .hero {
+  z-index: -1;
   background: #242828;
   width: 100%;
+  position: relative;
 }
-
 .hero div {
   position: absolute;
   height: 100%;
   width: 100%;
 }
-
 .hero .background {
   background: #242828 url("/css/res/img/background.png") bottom no-repeat;
 }
-
 .hero .foreground {
   background: url("/css/res/img/foreground.png") bottom no-repeat;
 }
-
-.hero .text {
+.hero .text #moore {
   position: fixed;
-  background: url("/css/res/img/text.png") center no-repeat;
+  background: url("/css/res/img/moore.png") left no-repeat;
+  background-position: 15% 10%;
+  background-size: 35%;
+}
+.hero .text #yoga {
+  position: fixed;
+  background: url("/css/res/img/yoga.png") right no-repeat;
+  background-position: 80% 60%;
+  background-size: 30%;
 }
 
-.intro {
-  background: yellow;
+.about {
+  z-index: 999;
+  background: #DBD7CB;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
 }
-/*# sourceMappingURL=main.css.map */
+.about .row {
+  height: 100%;
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.about .row img {
+  width: 30%;
+}
+.about .row .info {
+  display: inline-block;
+  height: 70%;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.about .row .info h1 {
+  font-size: 4em;
+  margin-top: 0;
+}
+
+.video {
+  position: relative;
+  overflow: hidden;
+}
+.video iframe {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}/*# sourceMappingURL=main.css.map */

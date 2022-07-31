@@ -2,9 +2,10 @@ section
   height: 100vh
   
 .hero
+  z-index: -1
   background: #242828
   width: 100%
-  // position: 
+  position: relative
   
   div
     position: absolute
@@ -18,9 +19,52 @@ section
     background: url('/css/res/img/foreground.png') bottom no-repeat
   
   .text
-    position: fixed
-    background: url('/css/res/img/text.png') center no-repeat
+    #moore
+      position: fixed
+      background: url('/css/res/img/moore.png') left no-repeat
+      background-position: 15% 10%
+      background-size: 35%
+    
+    #yoga
+      position: fixed
+      background: url('/css/res/img/yoga.png') right no-repeat
+      background-position: 80% 60%
+      background-size: 30%
 
+.about
+  z-index: 999
+  background: #DBD7CB
+  display: flex
+  flex-direction: row
+  justify-content: flex-end
 
-.intro
-  background: yellow
+  .row
+      height: 100%
+      width: 90%
+      display: flex
+      flex-direction: row
+      justify-content: center
+      align-items: center
+
+      img
+          width: 30%
+
+      .info
+          display: inline-block
+          height: 70%
+          width: fit-content
+
+          h1
+            font-size: 4em
+            margin-top: 0
+
+.video
+  position: relative
+  overflow: hidden
+  
+  iframe
+    height: 100%
+    width: 100%
+    position: absolute
+    left: 0
+    top: 0

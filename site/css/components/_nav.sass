@@ -14,7 +14,7 @@ nav
     width: 100%
     display: flex
     flex-direction: column
-    justify-content: space-between
+    justify-content: space-around
     align-items: center
 
     .box
@@ -22,5 +22,26 @@ nav
       width: 100%
       background-color: #fffdfdb4
       border-radius: 25px
+      display: none
+
+    #menu-box
+      display: flex
+      justify-content: center
+      align-items: center
+      
+      .hamburger
+        width: 50%
+        height: 50%
+        display: flex
+        flex-direction: column
+        justify-content: space-around
+        align-items: center
+
+        @each $index in [1,2,3]
+          .line-#{$index}
+            height: 8px
+            width: 100%
+            background: black
+            border-radius: 8px
 
       
